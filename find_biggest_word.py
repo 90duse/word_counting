@@ -1,4 +1,4 @@
-# this program will the biggest word or longest word in your file and how many
+# this program will find you the biggest word or longest word in your file and how many
 # time that word is in the file. also it will tell you total words in in your file
 try:
     name = input('Enter your file ')
@@ -11,20 +11,24 @@ try:
             counts[word] = counts.get(word, 0) + 1
     handle.close()
 
-    bigword = None
+    bigestWord = None
     numberOftime = None
 
     for word, tiro in counts.items():
-        if bigword is None or str(tiro) > bigword:
-            bigword = word
+        if bigestWord is None or str(tiro) > bigestWord:
+            bigestWord = word
             numberOftime = tiro
-    print(bigword,numberOftime)
-        
+    print(bigestWord,numberOftime)
+    
     totalwords = sum(counts.values())
     print('Total words in this file are: ', totalwords)
 
-except :
-      print('Unkown error is found in the code ',)
+except FileNotFoundError:
+    print(f"Error: The file '{name}' was not found.")
+except PermissionError:
+    print(f"Error: Permission denied to access the file '{name}'.")
+except Exception as e:
+    print(f"An error occurred: {e}")
     
 
 
