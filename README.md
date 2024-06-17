@@ -7,6 +7,11 @@ This Python application counts the occurrences of each word in a text file.
 - **Word Counting**: Counts how many times each word appears in the specified file.
 - **Total Word Count**: Provides the total number of words in the file.
 - **Customizable Input**: Allows the user to input the file name and the word to search for.
+- Word Counting: Counts how many times each word appears in the specified file.
+- **Top 10 Most Common Words**: Displays the top 10 most frequently occurring words in the file.
+- **Finding a Specific Word**: Allows the user to search for a specific word and displays its frequency in the file.
+- **Longest Word**: Identifies the longest word in the file and how many times it appears.
+
 
 ## Usage
 
@@ -25,13 +30,21 @@ This Python application counts the occurrences of each word in a text file.
    ```bash
    cd word-counting-app
    ```
-
+3. Use ls to see the projects file
+    ```bash
+   ls 
+   ```
+   output:
+   -count_words.py
+   -find_top10_common_words.py
+   -find_biggest_word
+   -find_special_world
 
 ### How to Use
 
 1. Run the program:
    ```bash
-   python word_count.py
+   python count_words.py 
    ```
 
 2. Enter the file name when prompted:
@@ -41,7 +54,7 @@ This Python application counts the occurrences of each word in a text file.
 
 3. Enter the word you want to search for:
    ```
-   Enter the word you want to find inside the file: legacy
+   Enter the word you want to find inside the file: example legacy
    ```
 
 4. The program will output the number of times the word appears in the file and the total word count.
