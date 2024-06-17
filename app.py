@@ -9,7 +9,7 @@ try:
         words = line.split()
         for word in words:
             counts[word] = counts.get(word, 0) + 1
-
+    handle.close()
 
     bigword = None
     numberOftime = None
@@ -27,9 +27,10 @@ except :
       print('Unkown error is found in the code ',)
     
 
-# dealing files this code will get you any special word that you may want 
-# to search inside a file. in the exaple we are using legacy.txt file which it
-# has some pragraphs
+
+
+
+
 
 
 
